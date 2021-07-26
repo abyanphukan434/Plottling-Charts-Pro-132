@@ -15,7 +15,9 @@ headers = rows[0]
 star_data = rows[1:]
 
 star_masses = []
+
 star_radiuses = []
+
 star_gravities = []
 
 for star in star_data:
@@ -27,4 +29,5 @@ for star in star_data:
         star_gravities.append(float(star[5]))
 
 fig = px.scatter(x = star_masses, y = star_radiuses, size = star_gravities, range_y = (-2e+8, 3e+9), range_x = (-1e+31, 2.1e+32), labels = dict(x = 'Mass of Star', y = 'Radius of Star'))
+
 fig.show()
